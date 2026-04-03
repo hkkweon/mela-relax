@@ -13,7 +13,7 @@
     })(window, document, "clarity", "script", "w2p92upbhv");
 </script>
 
-  <title>멜라 릴렉스 — 사전 체험단 모집 | 부작용·내성 걱정 없는 수면 나이트 스틱</title>
+  <title>멜라 릴렉스 — 사전 체험단 모집 | 10종 고함량 수면 나이트 스틱</title>
 
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
@@ -106,8 +106,24 @@
        HERO
     ══════════════════════════════════════ */
     #hero{padding:0;background:var(--bg)}
-    .hero-img{width:100%;overflow:hidden}
-    .hero-img img{width:100%;height:460px;object-fit:cover;object-position:center top;display:block}
+
+    /* slider */
+    .hero-slider{width:100%;overflow:hidden;position:relative;user-select:none}
+    .hero-slides{display:flex;overflow-x:scroll;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .hero-slides::-webkit-scrollbar{display:none}
+    .hero-slide{min-width:100%;scroll-snap-align:start;flex-shrink:0}
+    .hero-slide img{width:100%;height:460px;object-fit:cover;object-position:center top;display:block}
+    .hero-nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(6px);border:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:background .15s,opacity .15s}
+    .hero-nav:active{background:rgba(255,255,255,.95)}
+    .hero-nav svg{width:16px;height:16px;stroke:var(--t1);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .hero-nav.prev{left:12px}
+    .hero-nav.next{right:12px}
+    .hero-nav.hidden{opacity:0;pointer-events:none}
+    .hero-thumbs{display:flex;gap:8px;padding:10px var(--ph) 0}
+    .hero-thumb{width:52px;height:52px;border-radius:var(--rsm);overflow:hidden;border:2px solid transparent;cursor:pointer;flex-shrink:0;transition:border-color .2s,opacity .2s;opacity:.45}
+    .hero-thumb.active{border-color:var(--cta);opacity:1}
+    .hero-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+
     .hero-content{padding:28px var(--ph) 48px}
     .hero-name{font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--t1);line-height:1.3;margin-bottom:16px}
     .hero-bullets{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:7px}
@@ -317,18 +333,42 @@
 ══════════════════════════════════════════ -->
 <section id="hero" aria-labelledby="hero-h1">
 
-  <div class="hero-img r">
-    <img src="images/Gemini_Generated_Image_8eluby8eluby8elu (1) 1.png"
-      alt="멜라 릴렉스 — 부작용 내성 걱정 없는 수면 나이트 스틱" loading="eager" />
+  <!-- Hero image slider -->
+  <div class="hero-slider r" id="heroSlider">
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide">
+        <img src="images/Gemini_Generated_Image_8eluby8eluby8elu (1) 1.png"
+          alt="멜라 릴렉스 제품" loading="eager" />
+      </div>
+      <div class="hero-slide">
+        <img src="images/Gemini_Generated_Image_aadamdaadamdaada 1.png"
+          alt="멜라 릴렉스 — 컵에 따르는 장면" loading="lazy" />
+      </div>
+    </div>
+    <button class="hero-nav prev hidden" id="heroPrev" aria-label="이전 이미지">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="hero-nav next" id="heroNext" aria-label="다음 이미지">
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+  </div>
+  <!-- thumbnails -->
+  <div class="hero-thumbs" id="heroThumbs">
+    <button class="hero-thumb active" data-idx="0" aria-label="제품 이미지">
+      <img src="images/Gemini_Generated_Image_8eluby8eluby8elu (1) 1.png" alt="" />
+    </button>
+    <button class="hero-thumb" data-idx="1" aria-label="연출 이미지">
+      <img src="images/Gemini_Generated_Image_aadamdaadamdaada 1.png" alt="" />
+    </button>
   </div>
 
   <div class="hero-content">
 
-    <h1 id="hero-h1" class="hero-name r">[부작용·내성 걱정 제로] 멜라 릴렉스</h1>
+    <h1 id="hero-h1" class="hero-name r">[국내 최다함량 정밀 설계] 멜라 릴렉스</h1>
 
     <ul class="hero-bullets r d1">
-      <li>편안한 밤을 만들어주는 <strong>식물성 멜라토닌 2mg</strong></li>
-      <li>멜라토닌 단독 섭취의 부작용을 해결한 <strong>Safebel Matrix™ 설계</strong></li>
+      <li><strong>영양제 10종을</strong> 한 포에, <strong>3,300mg 이상 고함량</strong></li>
+      <li>부작용 없는 <strong>논문 기반 Safebel Matrix™</strong></li>
       <li>매일 먹고 싶은 <strong>상큼달달 피치 맛</strong></li>
     </ul>
 
@@ -369,7 +409,7 @@
           <div class="rc-name">김○○ · 30대 직장인</div>
           <div class="rc-type">사전 체험단 참여자</div>
         </div>
-        <p class="rc-quote">멜라토닌만 먹으면 진짜 생생하게 악몽 꾸었어서 다시 먹기 망설였는데 이건 진짜 깊게 푹 잤어요.</p>
+        <p class="rc-quote">여러 성분 고함량으로 채우니까 확실히 푹 자고 아침에 몸이 가벼워요.</p>
       </div>
       <div class="rc-sq">
         <img src="images/Gemini_Generated_Image_6osslb6osslb6oss.png" alt="" loading="lazy" />
@@ -382,7 +422,7 @@
           <div class="rc-name">이○○ · 20대 대학원생</div>
           <div class="rc-type">사전 체험단 참여자</div>
         </div>
-        <p class="rc-quote">수면 제품은 처음인데 생각보다 맛도 괜찮고 잠도 잘 와서 계속 먹어보려고요. 멜라토닌 양도 매일 먹기 부담 없어요!</p>
+        <p class="rc-quote">멜라토닌만 먹으면 꿈이 너무 생생해서 안먹었는데 이건 진짜 신기하게 중간에 깨지도 않고 푹 잤어요.</p>
       </div>
       <div class="rc-sq">
         <img src="images/Gemini_Generated_Image_sdmjyrsdmjyrsdmj.png" alt="" loading="lazy" />
@@ -395,7 +435,7 @@
           <div class="rc-name">박○○ · 20대 프리랜서</div>
           <div class="rc-type">사전 체험단 참여자</div>
         </div>
-        <p class="rc-quote">피치 맛이라 계속 찾게 돼요. 잠의 퀄리티가 확실히 높아진 것 같아요. 중간에 깨지 않고 아침까지 숙면하니까 컨디션이 너무 좋아요.</p>
+        <p class="rc-quote">함량이 높다고 해서 약 맛이 날 줄 알았는데 그냥 맛있는 복숭아 맛이에요! 영양제 10종류를 한 포에 담았는데 맛까지 잡았다니 매일 밤이 기다려집니다.</p>
       </div>
       <div class="rc-sq">
         <img src="images/Gemini_Generated_Image_j25eu0j25eu0j25e.png" alt="" loading="lazy" />
@@ -424,33 +464,38 @@
       <span class="rcheck" aria-hidden="true">
         <svg viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#2E2A6E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
-      <span class="rtext">불규칙한 생활로 깨진 <strong>수면 패턴을 되찾고 싶은 분</strong></span>
+      <span class="rtext">기존 수면 보조제의 <strong>낮은 함량에 효과를 보지 못하신 분</strong></span>
     </li>
     <li>
       <span class="rcheck" aria-hidden="true">
         <svg viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#2E2A6E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
-      <span class="rtext"><strong>부작용이나 내성 걱정 없는</strong> 안전한 수면 보조제를 찾으시는 분</span>
+      <span class="rtext">수면 논문에 근거한 <strong>과학적이고 정밀한 고함량 설계</strong>를 선호하시는 분</span>
     </li>
     <li>
       <span class="rcheck" aria-hidden="true">
         <svg viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#2E2A6E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
-      <span class="rtext">멜라토닌 섭취 후 <strong>악몽이나 가위눌림을 경험</strong>해 보신 분</span>
+      <span class="rtext">멜라토닌 특유의 <strong>생생한 꿈이 불편하셨던 분</strong></span>
     </li>
     <li>
       <span class="rcheck" aria-hidden="true">
         <svg viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#2E2A6E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
-      <span class="rtext">수면 패턴을 되찾고 <strong>아침까지 깨지 않는 깊은 숙면</strong>을 원하시는 분</span>
+      <span class="rtext"><strong>10가지 핵심 성분</strong>으로 입면부터 숙면까지 빈틈없는 케어를 원하시는 분</span>
     </li>
   </ul>
 
 </section>
 
 
+<!-- 포인트 1 전 배너 이미지 -->
+<div style="width:100%;overflow:hidden">
+  <img src="images/Group 373.png" alt="" style="width:100%;display:block" loading="lazy" />
+</div>
+
 <!-- ══════════════════════════════════════════
-     POINT 1 — Safebel Matrix™ (악몽 없는 숙면)
+     POINT 1 — 10종 시너지 고함량 설계
 ══════════════════════════════════════════ -->
 <section id="point1" class="point-section" style="background:var(--surface)" aria-labelledby="p1-title">
 
@@ -461,16 +506,97 @@
 
   <p class="point-num r d1" aria-hidden="true">01</p>
   <h2 id="p1-title" class="point-title r d1">
-    악몽 없는 숙면의 과학,<br>
-    <span style="font-size:20px;font-weight:600;letter-spacing:.01em">Safebel Matrix™</span>
+    수면 사이클의 핵심,<br>
+    10종 시너지 고함량 설계
+  </h2>
+
+  <div class="point-body r d2">
+    <p>
+      단순히 잠드는 것만이 목표가 아닙니다.<br>
+      멜라 릴렉스는 입면부터 기상까지 이어지는 수면 사이클을 위해<br>
+      <strong>멜라토닌, 마그네슘, 글리신을 포함한 10종 성분을<br>
+      3,300mg 이상 정밀하게 꽉 채웠습니다.</strong>
+    </p>
+  </div>
+
+  <div class="ingr-group r d2">
+    <span class="igl sleep">Sleep Core</span>
+    <div class="ig-stack">
+
+      <div class="ic-full">
+        <div class="ic-full-top">
+          <img src="images/mela.jpg" alt="식물성 타트체리 추출 멜라토닌 2mg" loading="lazy" />
+        </div>
+        <div class="ic-full-body">
+          <div class="ic-full-name">100% 식물성 타트체리 추출 멜라토닌 2mg</div>
+          <p class="ic-full-desc">내성 걱정 없이 매일 섭취 가능한 천연 유래 식물성 원료만을 엄선하여 안전한 2mg 용량으로 담았습니다.</p>
+        </div>
+      </div>
+
+      <div class="ic-full">
+        <div class="ic-full-top">
+          <img src="images/mag.jpg" alt="마그네슘 200mg" loading="lazy" />
+        </div>
+        <div class="ic-full-body">
+          <div class="ic-full-name">피곤한 몸을 편안하게 만드는 마그네슘 200mg</div>
+          <p class="ic-full-desc">근육 이완과 신경 안정에 도움을 주어 수면의 기초를 형성하는 마그네슘을 넉넉하게 담아 몸의 긴장을 풀어줍니다.</p>
+        </div>
+      </div>
+
+      <div class="ic-full">
+        <div class="ic-full-top">
+          <img src="images/thea.jpg" alt="L-테아닌 100mg" loading="lazy" />
+        </div>
+        <div class="ic-full-body">
+          <div class="ic-full-name">스트레스를 줄여주는 L-테아닌 100mg</div>
+          <p class="ic-full-desc">긴장을 완화해 마음을 차분하게 가라앉히며, 멜라토닌과 시너지를 내어 수면 지속 시간을 늘리고 다음 날 최상의 컨디션을 선사합니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="callout r d3">
+    <div class="callout-label">시너지 완성</div>
+    <p>
+      L-트립토판, 비타민 B1, B6, B12 등<br>
+      <strong>수면 보조를 위한 6가지 부원료</strong>를 더해<br>
+      영양제 10종류를 단 한 포에 담아냈습니다.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- mid-page CTA -->
+<div class="mid-cta r">
+  <p class="mid-cta-label">지금 신청하면 무료 샘플 + 첫 구매 40% 쿠폰을 받을 수 있어요</p>
+  <button class="btn-primary" onclick="scrollToForm()">사전 체험단 신청하기</button>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     POINT 2 — Safebel Matrix™ (부작용 없는 숙면)
+══════════════════════════════════════════ -->
+<section id="point2" class="point-section" style="background:var(--bg)" aria-labelledby="p2-title">
+
+  <div class="eyebrow r">
+    <span class="ey-line" aria-hidden="true"></span>
+    <span class="label-serif">Point 02</span>
+  </div>
+
+  <p class="point-num r d1" aria-hidden="true">02</p>
+  <h2 id="p2-title" class="point-title r d1">
+    부작용 걱정 없는<br>
+    논문 기반 Safebel Matrix™
   </h2>
 
   <div class="point-body r d2">
     <p>
       멜라토닌은 뇌 각성 중추를 억제해 REM 수면(꿈)을<br>
       늘려 악몽을 유발할 수 있습니다.<br>
-      멜라 릴렉스는 이를 방지하기 위해 <strong>깊은 잠의 비중을<br>
-      높이는 독자적 배합</strong>을 적용했습니다.
+      멜라 릴렉스는 이를 방지하기 위해 <strong>수면 논문에 근거한<br>
+      글리신 3,000mg 포함 독자적 배합</strong>으로 부작용 걱정을 지웠습니다.
     </p>
   </div>
 
@@ -480,18 +606,16 @@
 
       <div class="ic-full">
         <div class="ic-full-top">
-          <!-- 글리신 이미지: images/gly.jpg 로 교체 필요 -->
           <img src="images/mela.jpg" alt="글리신 3000mg" loading="lazy" />
         </div>
         <div class="ic-full-body">
-          <div class="ic-full-name">REM 수면을 조절하는 글리신 3,000mg</div>
-          <p class="ic-full-desc">심부 체온을 효과적으로 낮춰 깊은 잠(Non-REM) 단계로 빠르게 진입시키며, 멜라토닌으로 인해 과해질 수 있는 꿈의 생생함을 안정적으로 제어합니다.</p>
+          <div class="ic-full-name">글리신 3,000mg</div>
+          <p class="ic-full-desc">수많은 연구가 입증한 숙면 유효 함량 3,000mg을 그대로 담았습니다. 심부 체온을 효과적으로 낮춰 깊은 잠(Non-REM) 단계로 빠르게 진입시키며, 꿈의 생생함을 안정적으로 조절합니다.</p>
         </div>
       </div>
 
       <div class="ic-full">
         <div class="ic-full-top">
-          <!-- GABA 이미지: images/gaba.jpg 로 교체 필요 -->
           <img src="images/thea.jpg" alt="GABA 100mg" loading="lazy" />
         </div>
         <div class="ic-full-body">
@@ -502,7 +626,6 @@
 
       <div class="ic-full">
         <div class="ic-full-top">
-          <!-- 아피제닌 이미지: images/api.jpg 로 교체 필요 -->
           <img src="images/mag.jpg" alt="아피제닌 50mg" loading="lazy" />
         </div>
         <div class="ic-full-body">
@@ -521,7 +644,7 @@
       <p class="study-card-text">글리신 3g 투여 시 Non-REM(깊은 잠) 수면 시간을 121% 증가시키고 입면 시간을 33% 단축하여 수면 구조를 정상화합니다. 여기에 GABA 100mg과 아피제닌 50mg의 시너지를 통해 뇌의 과각성을 차단하고 깊은 수면 비중을 25% 확대함으로써, 멜라토닌의 입면 효과는 유지하되 수면 중 불쾌한 각성과 꿈의 빈도를 과학적으로 낮춥니다.</p>
     </div>
     <div class="study-card-img">
-      <img src="images/스크린샷 2026-03-28 오후 3.54.27.png" alt="글리신 수면 임상 연구 데이터" loading="lazy" />
+      <img src="images/스크린샷 2026-03-28 오후 3.54.27.png" alt="글리신 수면 임상 연구 데이터" loading="lazy" />
     </div>
   </div>
 
@@ -531,78 +654,6 @@
       글리신 3,000mg + GABA + 아피제닌의 조합으로<br>
       멜라토닌이 유발할 수 있는 <strong>REM 수면 과잉을 억제</strong>하고<br>
       깊은 Non-REM 수면의 비중을 높여드립니다.
-    </p>
-  </div>
-
-</section>
-
-
-<!-- mid-page CTA -->
-<div class="mid-cta r">
-  <p class="mid-cta-label">지금 신청하면 무료 샘플 + 첫 구매 40% 쿠폰을 받을 수 있어요</p>
-  <button class="btn-primary" onclick="scrollToForm()">사전 체험단 신청하기</button>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     POINT 2 — 삼중 배합 (대형 성분 카드)
-══════════════════════════════════════════ -->
-<section id="point2" class="point-section" style="background:var(--bg)" aria-labelledby="p2-title">
-
-  <div class="eyebrow r">
-    <span class="ey-line" aria-hidden="true"></span>
-    <span class="label-serif">Point 02</span>
-  </div>
-
-  <p class="point-num r d1" aria-hidden="true">02</p>
-  <h2 id="p2-title" class="point-title r d1">
-    수면을 위한<br>
-    멜라토닌 + 마그네슘 + L-테아닌<br>
-    삼중 배합
-  </h2>
-
-  <div class="ingr-group r d2">
-    <span class="igl sleep">Sleep Core</span>
-    <div class="ig-stack">
-
-      <div class="ic-full">
-        <div class="ic-full-top">
-          <img src="images/mela.jpg" alt="식물성 타트체리 추출 멜라토닌 2mg" loading="lazy" />
-        </div>
-        <div class="ic-full-body">
-          <div class="ic-full-name">100% 식물성 타트체리 추출 멜라토닌 2mg</div>
-          <p class="ic-full-desc">내성 걱정 없이 매일 섭취 가능한 천연 유래 식물성 원료만을 엄선하여 안전한 2mg 용량으로 담았습니다.</p>
-        </div>
-      </div>
-
-      <div class="ic-full">
-        <div class="ic-full-top">
-          <img src="images/mag.jpg" alt="마그네슘 글리시네이트 200mg" loading="lazy" />
-        </div>
-        <div class="ic-full-body">
-          <div class="ic-full-name">피곤한 몸을 편안하게, 마그네슘 글리시네이트 200mg</div>
-          <p class="ic-full-desc">저가형 산화 마그네슘이 아닙니다. 근육 이완과 신경 안정에 도움을 주어 수면의 질을 높이는 '글리시네이트' 형태를 확인하세요.</p>
-        </div>
-      </div>
-
-      <div class="ic-full">
-        <div class="ic-full-top">
-          <img src="images/thea.jpg" alt="L-테아닌 100mg" loading="lazy" />
-        </div>
-        <div class="ic-full-body">
-          <div class="ic-full-name">스트레스를 줄여 마음을 차분하게, L-테아닌 100mg</div>
-          <p class="ic-full-desc">긴장을 완화해 마음을 차분하게 가라앉히며, 멜라토닌과 시너지를 내어 수면 지속 시간을 늘리고 다음 날 최상의 컨디션을 선사합니다.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="callout r d3">
-    <div class="callout-label">멜라 릴렉스만의 삼중 배합</div>
-    <p>
-      멜라토닌 단독이 아닌, <strong>L-테아닌과 마그네슘 글리시네이트를 함께</strong> 담았습니다.<br>
-      L-테아닌은 알파파 유도로 자연스러운 이완을 돕고, 마그네슘은 신경계 안정과 근육 이완으로 보다 깊은 수면을 지원합니다.
     </p>
   </div>
 
@@ -634,7 +685,7 @@
   <div class="text-grid2 r d3">
     <div class="tc">
       <div class="tc-name">Quick-Absorb 공법</div>
-      <p class="tc-desc">입안에서 사르르 녹는 초미립 분말로 체내에 빠르게 흡수됩니다. 즉각적인 휴식 모드로 진입하세요.</p>
+      <p class="tc-desc">핵심 성분 3,300mg 이상의 고함량이 체내에 빠르게 흡수될 수 있도록 입안에서 사르르 녹는 초미립 분말로 설계했습니다.</p>
     </div>
     <div class="tc">
       <div class="tc-name">상큼달달한 피치맛</div>
@@ -646,7 +697,7 @@
     <div class="callout-label">ONE STICK ROUTINE</div>
     <p>
       하루 한 포로<br>
-      <strong>악몽 없는 깊은 숙면</strong>을 위한 성분을 한 번에.<br>
+      <strong>10종 성분 3,300mg 이상</strong>을 한 번에.<br>
       침대 옆에 두고, 매일 밤 자연스럽게 손이 가는 루틴을 만드세요.
     </p>
   </div>
@@ -670,7 +721,7 @@
   </h2>
 
   <p class="form-body r d2">
-    자기 전 1포로 악몽 걱정 없는 깊은 숙면을.<br>
+    자기 전 1포로 10종 고함량 성분을 한 번에.<br>
     정식 출시 전 가장 먼저 체험해보세요.
   </p>
 
@@ -805,6 +856,36 @@
      JAVASCRIPT
 ══════════════════════════════════════════ -->
 <script>
+  /* ── Hero slider ── */
+  (function(){
+    var slides=document.getElementById('heroSlides');
+    var thumbs=document.querySelectorAll('#heroThumbs .hero-thumb');
+    var btnPrev=document.getElementById('heroPrev');
+    var btnNext=document.getElementById('heroNext');
+    if(!slides)return;
+    var total=slides.children.length;
+    var cur=0;
+    function goTo(idx){
+      cur=Math.max(0,Math.min(total-1,idx));
+      slides.scrollTo({left:slides.offsetWidth*cur,behavior:'smooth'});
+      updateUI();
+    }
+    function updateUI(){
+      thumbs.forEach(function(t,i){t.classList.toggle('active',i===cur)});
+      if(btnPrev)btnPrev.classList.toggle('hidden',cur===0);
+      if(btnNext)btnNext.classList.toggle('hidden',cur===total-1);
+    }
+    thumbs.forEach(function(t){t.addEventListener('click',function(){goTo(parseInt(this.dataset.idx,10))})});
+    if(btnPrev)btnPrev.addEventListener('click',function(){goTo(cur-1)});
+    if(btnNext)btnNext.addEventListener('click',function(){goTo(cur+1)});
+    var timer;
+    slides.addEventListener('scroll',function(){
+      clearTimeout(timer);
+      timer=setTimeout(function(){cur=Math.round(slides.scrollLeft/slides.offsetWidth);updateUI()},60);
+    });
+    updateUI();
+  })();
+
   /* ── Scroll reveal ── */
   (function(){
     var obs=new IntersectionObserver(function(entries){
