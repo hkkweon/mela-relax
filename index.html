@@ -39,7 +39,7 @@
       --serif: "Cormorant Garamond","Times New Roman",serif;
       --sans:  "Pretendard Variable",Pretendard,Inter,system-ui,sans-serif;
       --ph: 24px;
-      --sec: 64px;
+      --sec: 48px;
       --max-w: 480px;
       --rsm: 8px; --rmd: 14px; --rlg: 20px; --rxl: 28px; --rfull: 999px;
     }
@@ -67,7 +67,7 @@
     .label-serif{font-family:var(--serif);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--t2)}
     .label-sans{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--t2)}
     .h2{font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.015em;color:var(--t1)}
-    .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+    .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
     .ey-line{width:18px;height:1px;background:var(--peach);flex-shrink:0}
 
     /* ── Buttons ── */
@@ -179,19 +179,19 @@
        POINT SECTIONS
     ══════════════════════════════════════ */
     .point-section{padding:var(--sec) var(--ph)}
-    .point-num{font-family:var(--serif);font-size:60px;font-weight:400;line-height:1;color:var(--border);letter-spacing:-.03em;margin-bottom:4px}
-    .point-title{font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.015em;color:var(--t1);margin-bottom:16px}
-    .point-body{font-size:15px;line-height:1.85;color:var(--t2)}
-    .point-body p+p{margin-top:12px}
+    .point-num{font-family:var(--serif);font-size:52px;font-weight:400;line-height:1;color:var(--border);letter-spacing:-.03em;margin-bottom:2px}
+    .point-title{font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.015em;color:var(--t1);margin-bottom:12px}
+    .point-body{font-size:15px;line-height:1.8;color:var(--t2)}
+    .point-body p+p{margin-top:10px}
 
     /* ingredient group wrapper */
-    .ingr-group{margin-top:22px}
+    .ingr-group{margin-top:16px}
     .igl{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--rfull);margin-bottom:12px}
     .igl.sleep{background:var(--lavender);color:var(--lav-d)}
     .igl.safebel{background:#C9E8E4;color:#1E5450}
 
     /* ── 대형 성분 카드 ── */
-    .ig-stack{display:flex;flex-direction:column;gap:12px}
+    .ig-stack{display:flex;flex-direction:column;gap:10px}
     .ic-full{
       background:#fff;border:1px solid var(--border);border-radius:var(--rlg);overflow:hidden;
     }
@@ -476,7 +476,7 @@
       <span class="rcheck" aria-hidden="true">
         <svg viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#2E2A6E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
-      <span class="rtext">멜라토닌 특유의 <strong>생생한 꿈이 불편하셨던 분</strong></span>
+      <span class="rtext">자고 일어나도 <strong>개운하지 않아 고민이셨던 분</strong></span>
     </li>
     <li>
       <span class="rcheck" aria-hidden="true">
@@ -579,7 +579,7 @@
 
 
 <!-- ══════════════════════════════════════════
-     POINT 2 — Safebel Matrix™ (부작용 없는 숙면)
+     POINT 2 — Safebel Matrix™ (아침이 개운한 숙면)
 ══════════════════════════════════════════ -->
 <section id="point2" class="point-section" style="background:var(--bg)" aria-labelledby="p2-title">
 
@@ -590,16 +590,16 @@
 
   <p class="point-num r d1" aria-hidden="true">02</p>
   <h2 id="p2-title" class="point-title r d1">
-    부작용 걱정 없는<br>
-    논문 기반 Safebel Matrix™
+    아침이 개운한 숙면의 과학,<br>
+    Safebel Matrix™
   </h2>
 
   <div class="point-body r d2">
     <p>
-      멜라토닌은 뇌 각성 중추를 억제해 REM 수면(꿈)을<br>
-      늘려 악몽을 유발할 수 있습니다.<br>
-      멜라 릴렉스는 이를 방지하기 위해 <strong>수면 논문에 근거한<br>
-      글리신 3,000mg 포함 독자적 배합</strong>으로 부작용 걱정을 지웠습니다.
+      멜라토닌 단독 섭취는 뇌를 억지로 재워<br>
+      기상 후 <strong>몽롱함(잔여감)을 남길 수 있습니다.</strong><br>
+      멜라 릴렉스는 논문 기반의 <strong>글리신 3,000mg 처방</strong>으로<br>
+      멜라토닌의 잔여감을 지우고 아침을 맑게 깨웁니다.
     </p>
   </div>
 
@@ -612,8 +612,8 @@
           <img src="images/mela.jpg" alt="글리신 3000mg" loading="lazy" />
         </div>
         <div class="ic-full-body">
-          <div class="ic-full-name">글리신 3,000mg</div>
-          <p class="ic-full-desc">수많은 연구가 입증한 숙면 유효 함량 3,000mg을 그대로 담았습니다. 심부 체온을 효과적으로 낮춰 깊은 잠(Non-REM) 단계로 빠르게 진입시키며, 꿈의 생생함을 안정적으로 조절합니다.</p>
+          <div class="ic-full-name">[기상 컨디션 최적화] 식물성 글리신 3,000mg</div>
+          <p class="ic-full-desc">연구 데이터가 증명하는 숙면 유효 함량 3,000mg을 투입했습니다. 심부 체온을 조절해 얕은 잠이 아닌 '깊은 휴식(Non-REM)' 구간을 늘려, 짧게 자도 몇 시간을 더 잔 듯한 개운함을 선사합니다.</p>
         </div>
       </div>
 
@@ -623,24 +623,24 @@
         </div>
         <div class="ic-full-body">
           <div class="ic-full-name">뇌의 과각성을 막는 GABA 100mg</div>
-          <p class="ic-full-desc">신경 안정 전달 물질인 가바가 뇌의 흥분을 가라앉혀, 자는 도중 작은 소음에도 깨지 않는 단단한 수면 유지를 돕습니다.</p>
+          <p class="ic-full-desc">신경 안정 전달 물질인 가바가 수면 중 불필요한 뇌 활동을 줄여, 기상 시 머리가 무거운 현상을 방지합니다.</p>
         </div>
       </div>
 
       <div class="ic-full">
         <div class="ic-full-top">
-          <img src="images/mag.jpg" alt="아피제닌 50mg" loading="lazy" />
+          <img src="images/mag.jpg" alt="비타민 B군" loading="lazy" />
         </div>
         <div class="ic-full-body">
-          <div class="ic-full-name">평온한 휴식을 위한 아피제닌 50mg</div>
-          <p class="ic-full-desc">천연 진정 성분인 아피제닌이 수면 지속 시간을 늘리고, 기상 직전 불쾌한 악몽이 기억되지 않도록 수면의 질을 최적화합니다.</p>
+          <div class="ic-full-name">상쾌한 아침을 위한 비타민 B군 시너지</div>
+          <p class="ic-full-desc">수면 중 에너지 대사를 돕는 비타민 B1, B6, B12를 함께 설계하여, 눈 뜨는 순간 에너지가 차오르는 컨디션을 완성합니다.</p>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- 글리신·GABA·아피제닌 임상 연구 데이터 -->
+  <!-- 글리신·GABA·비타민B 임상 연구 데이터 -->
   <div class="study-card r d3">
     <div class="study-card-body">
       <div class="study-card-label">Clinical Evidence</div>
@@ -654,9 +654,9 @@
   <div class="callout r d3">
     <div class="callout-label">SAFEBEL MATRIX™</div>
     <p>
-      글리신 3,000mg + GABA + 아피제닌의 조합으로<br>
-      멜라토닌이 유발할 수 있는 <strong>REM 수면 과잉을 억제</strong>하고<br>
-      깊은 Non-REM 수면의 비중을 높여드립니다.
+      글리신 3,000mg + GABA + 비타민 B군의 조합으로<br>
+      멜라토닌의 <strong>잔여감을 지우고</strong><br>
+      눈 뜨는 순간부터 맑고 개운한 아침을 완성합니다.
     </p>
   </div>
 
